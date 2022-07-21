@@ -21,6 +21,8 @@ public class Setup {
     private static String password      = null;
     private static String url           = null;
     private static String browserName   = null;
+    private static String procedure     = null;
+    private static String status        = null;
 
     public static void setup() {
         setupConfig();
@@ -45,6 +47,14 @@ public class Setup {
 
     public static String getHomeURL() {
         return url;
+    }
+
+    public static String getProcedure() {
+        return procedure;
+    }
+
+    public static String getStatus() {
+        return status;
     }
 
     private static void setupDriver() {
@@ -84,6 +94,8 @@ public class Setup {
             password    = props.getProperty("password");
             browserName = props.getProperty("browser");
             url         = props.getProperty("url");
+            procedure   = props.getProperty("procedure");
+            status      = props.getProperty("status");
 
         } catch (IOException e) {
             throw new RuntimeException(e);
