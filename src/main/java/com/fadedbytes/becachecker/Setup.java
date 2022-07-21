@@ -23,8 +23,8 @@ public class Setup {
     private static String browserName   = null;
 
     public static void setup() {
-        setupDriver();
         setupConfig();
+        setupDriver();
     }
 
     @NotNull
@@ -88,10 +88,6 @@ public class Setup {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("userName: " + userName);
-        System.out.println("password: " + password);
-        System.out.println("browserName: " + browserName);
-        System.out.println("url: " + url);
     }
 
     private static BrowserType getBrowserType() {
